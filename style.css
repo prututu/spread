@@ -4,11 +4,9 @@
 	font-family: 'PP Neue Montreal';
 	src: url('PPNeueMontreal-Regular.woff2') format('truetype');
 	font-weight: 200, 300, 400, 450, 550, 800;
- }
+}
 
- /*
 
- */
 /* || VARIABLES */
 
 :root{
@@ -20,7 +18,7 @@
 
 }
 
-/* || MEDIA QUESRIES */
+/* || MEDIA QUERY */
 
 
 @media (min-width:768px) {
@@ -33,6 +31,8 @@
     }
 }
 
+/* || PARTS OF THE WEBSITE */
+
 body {
     font-family: 'PP Neue Montreal';
     font-size: var(--body-copy)
@@ -40,20 +40,6 @@ body {
 
 body > * {
     padding:var(--page-spacing)
-}
-
-H1{
-    font-weight: 400;
-    font-size: var(--main-heading)
-}
-
-H2{
-    font-size: var(--sub-heading)
-}
-
-header,footer{
-    background-color:gold;
-
 }
 
 header{
@@ -70,3 +56,24 @@ header{
 
     }
 }
+
+header,footer{
+    background-color:gold;
+
+}
+
+/* || TEXT STYLES*/
+
+H1{
+    font-weight: 400;
+    font-size: var(--main-heading)
+}
+
+H2{
+    font-size: var(--sub-heading)
+}
+
+
+
+
+
