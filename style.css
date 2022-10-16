@@ -18,6 +18,17 @@
     --sub-heading: calc(var(--body-copy)*1.5);
 
     --background-color: black;
+
+    /* SWITCH */
+
+    --toggle-width: calc(var(--main-heading)*2.20);
+    --toggle-height: calc(var(--main-heading)*1);
+
+    --toggle-border-radius: calc(var(--main-heading)*0.5);
+
+    --toggle-switch: calc(var(--main-heading)*0.80);
+    --toggle-transformx: calc(var(--main-heading)*1.20);
+    --toggle-padding: calc(var(--main-heading)*0.10);
 }
 
 /* || DESKTOP */
@@ -62,7 +73,6 @@ header{
     header{
         flex-direction:row;
        
-
     }
 }
 
@@ -81,6 +91,7 @@ H2{
     margin: 0;
 }
 
+/* LINK STYLE */
 
 a{
     color: white;
@@ -96,11 +107,59 @@ a:visited{
     text-decoration: none !important;
 }
 
-
-/* ASSETS */
+/* || ASSETS */
 
 .line{
     border-top: 1px solid;
 }
 
+/* || TOGGLE SWITCH CODE */
 
+/* The whole switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: var(--toggle-width);   /* <-- */
+    height: var(--toggle-height); /* <-- */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    border-radius: var(--toggle-border-radius); /* <-- */
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    outline: 1px solid;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+
+    height: var(--toggle-switch);  /* <-- */
+    width: var(--toggle-switch);   /* <-- */
+
+    left: var(--toggle-padding);    /* <-- */
+    bottom: var(--toggle-padding);  /* <-- */
+
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    transform: translateX(var(--toggle-transformx));   /* <-- */
+}
