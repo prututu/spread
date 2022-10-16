@@ -6,42 +6,50 @@
 	font-weight: 200, 300, 400, 450, 550, 800;
 }
 
+/* PARKING LOT FOR FONT NAMES */
+/*
+font-family: 'Comic Neue', cursive;
+
+
+*/
+
 /*|| VARIABLES */ 
 
 /* FOR MOBILE */
 
 :root{
-    --body-copy:16px;
+    --body-copy:12px;
     --page-spacing:24px;
 
-    --main-heading: calc(var(--body-copy)*6);
+    --main-heading: 10vw;
+    --main-heading-line-height: calc(var(--main-heading));
     --sub-heading: calc(var(--body-copy)*1.5);
 
     --background-color: black;
 
     /* SWITCH */
+    --reference: calc(var(--main-heading)*0.75);
+    --toggle-width: calc(var( --reference)*2.55);
+    --toggle-height: calc(var(--reference)*1);
 
-    --toggle-width: calc(var(--main-heading)*2.20);
-    --toggle-height: calc(var(--main-heading)*1);
+    --toggle-border-radius: calc(var(--reference)*0.5);
 
-    --toggle-border-radius: calc(var(--main-heading)*0.5);
-
-    --toggle-switch: calc(var(--main-heading)*0.80);
-    --toggle-transformx: calc(var(--main-heading)*1.20);
-    --toggle-padding: calc(var(--main-heading)*0.10);
+    --toggle-switch: calc(var(--reference)*0.80);
+    --toggle-transformx: calc(var(--toggle-width) - var(--reference));
+    --toggle-padding: calc(var(--reference)*0.10);
 }
 
 /* || DESKTOP */
 
 @media (min-width:768px) {
     :root {
-        --body-copy:20px;
+        --body-copy:16px;
         --page-spacing:48px;
 
-        --main-heading: calc(var(--body-copy)*6);
+        --main-heading: 10vw;
         --sub-heading: calc(var(--body-copy)*2);
         
-        --background-color: blue;
+        --background-color: #383838;
     }
 }
 
@@ -52,28 +60,10 @@ body {
     color:white;
     font-family: 'PP Neue Montreal';
     font-size: var(--body-copy);
-    width: 1280px;
-    height: 2827px;
 }
 
 body > * {
     padding:var(--page-spacing)
-}
-
-header{
-    /*
-    display:flex;
-    flex-direction: row;
-    gap:calc(var(--page-spacing)*1);
-    justify-content:space-between;
-    */
-}
-
-@media (min-width:768px){
-    header{
-        flex-direction:row;
-       
-    }
 }
 
 
@@ -81,7 +71,9 @@ header{
 
 H1{
     font-weight: 400;
-    font-size: var(--main-heading)
+    font-size: var(--main-heading);
+    margin: 0;
+    line-height: var(--main-heading-line-height);
 }
 
 H2{
@@ -122,12 +114,12 @@ a:visited{
     width: var(--toggle-width);   /* <-- */
     height: var(--toggle-height); /* <-- */
 }
-
+ 
 /* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
-    width: 0;
-    height: 0;
+    width: 100;
+    height: 100;
 }
 
 /* The slider */
@@ -162,4 +154,39 @@ a:visited{
 
 input:checked + .slider:before {
     transform: translateX(var(--toggle-transformx));   /* <-- */
+}
+
+
+
+
+
+/* FLEXBOX */
+
+main{
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-bottom:3vh;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    }
+
+section.wrap {
+        display: inline-flex;
+        }
+    
+.auto{
+    flex: auto;
+    }
+
+.bubble{
+    display: inline-block;
+    outline: 1px solid;
+    height: var(--toggle-height); 
+    border-radius: var(--toggle-border-radius);
 }
