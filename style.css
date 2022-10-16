@@ -8,16 +8,19 @@
 
 /*|| VARIABLES */ 
 
+/* FOR MOBILE */
+
 :root{
     --body-copy:16px;
     --page-spacing:24px;
 
-    --main-heading: calc(var(--body-copy)*3);
+    --main-heading: calc(var(--body-copy)*6);
     --sub-heading: calc(var(--body-copy)*1.5);
 
+    --background-color: black;
 }
 
-/* || MEDIA QUERY */
+/* || DESKTOP */
 
 @media (min-width:768px) {
     :root {
@@ -26,12 +29,16 @@
 
         --main-heading: calc(var(--body-copy)*6);
         --sub-heading: calc(var(--body-copy)*2);
+        
+        --background-color: blue;
     }
 }
 
 /* || PARTS OF THE WEBSITE */
 
 body {
+    background-color: var(--background-color);
+    color:white;
     font-family: 'PP Neue Montreal';
     font-size: var(--body-copy);
     width: 1280px;
@@ -43,10 +50,12 @@ body > * {
 }
 
 header{
+    /*
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     gap:calc(var(--page-spacing)*1);
     justify-content:space-between;
+    */
 }
 
 @media (min-width:768px){
@@ -57,10 +66,6 @@ header{
     }
 }
 
-header,footer{
-    background-color:gold;
-
-}
 
 /* || TEXT STYLES*/
 
@@ -70,10 +75,32 @@ H1{
 }
 
 H2{
-    font-size: var(--sub-heading)
+    font-size: var(--sub-heading);
+    text-transform: uppercase;
+    font-weight: 200;
+    margin: 0;
 }
 
 
+a{
+    color: white;
+    text-decoration: none;
+}
 
+a:hover{
+    text-decoration: underline;
+}
+
+a:visited{
+    color: white;
+    text-decoration: none !important;
+}
+
+
+/* ASSETS */
+
+.line{
+    border-top: 1px solid;
+}
 
 
