@@ -1,20 +1,12 @@
-|| TYPOGRAPHY
-
-position: relative;
-width: 1280px;
-height: 2827px;
-
-background: #383838;
+/*|| TYPOGRAPHY */
 
 @font-face {
 	font-family: 'PP Neue Montreal';
-	src: url('PPNeueMontreal-Regular.woff2') format('truetype');
+	src: url('Assets/PP Neue Montreal/PPNeueMontreal-Regular.woff2') format('truetype');
 	font-weight: 200, 300, 400, 450, 550, 800;
 }
 
-
- */
-|| VARIABLES
+/*|| VARIABLES */ 
 
 :root{
     --body-copy:16px;
@@ -26,7 +18,6 @@ background: #383838;
 }
 
 /* || MEDIA QUERY */
-
 
 @media (min-width:768px) {
     :root {
@@ -42,7 +33,7 @@ background: #383838;
 
 body {
     font-family: 'PP Neue Montreal';
-    font-size: var(--body-copy)
+    font-size: var(--body-copy);
     width: 1280px;
     height: 2827px;
 }
