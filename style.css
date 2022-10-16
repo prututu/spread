@@ -1,4 +1,10 @@
-/* || TYPOGRAPHY */
+|| TYPOGRAPHY
+
+position: relative;
+width: 1280px;
+height: 2827px;
+
+background: #383838;
 
 @font-face {
 	font-family: 'PP Neue Montreal';
@@ -7,7 +13,8 @@
 }
 
 
-/* || VARIABLES */
+ */
+|| VARIABLES
 
 :root{
     --body-copy:16px;
@@ -36,6 +43,8 @@
 body {
     font-family: 'PP Neue Montreal';
     font-size: var(--body-copy)
+    width: 1280px;
+    height: 2827px;
 }
 
 body > * {
