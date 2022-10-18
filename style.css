@@ -199,3 +199,35 @@ section.wrap {
     height: var(--toggle-height); 
     border-radius: var(--toggle-border-radius);
 }
+
+/* || FOOTER */
+.footer {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    background-color: #000;
+    color: white;
+  }
+  
+  .footer-text {
+    flex: 90%;
+  }
+  
+  .footer-icons {
+    display: inline-flex;
+    font-size: 30px;
+    justify-content: start;
+  }
+  .icon-globe{
+    padding-right: 30px;
+  }
+  .icon-instagram{
+    padding-right: 30px;
+  }
+  
+  /* Responsive layout for Mobile - makes a one column-layout instead of two-column layout */
+  @media (max-width: 500px) {
+    .footer {
+      flex-direction: column;
+    }
+  }
