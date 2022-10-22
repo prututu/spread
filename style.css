@@ -57,10 +57,11 @@
         --body-copy:16px;
         --page-spacing:48px;
 
-        --main-heading: 10vw;
+        --main-heading: 9.1vw;
         --sub-heading: calc(var(--body-copy)*2);
         
         --background-color: #383838;
+        --article-width: 70vw
     }
 }
 
@@ -106,6 +107,10 @@ H2{
     text-transform: uppercase;
     font-weight: 200;
     margin: 0;
+}
+
+p {
+    max-width: var(--article-width);
 }
 
 /* LINK STYLE */
