@@ -36,6 +36,7 @@
     --sub-heading: calc(var(--body-copy)*1.5);
 
     --background-color: black;
+    --arrow-width: 6vw;
 
     /* SWITCH */
     --reference: calc(var(--main-heading)*0.75);
@@ -74,6 +75,20 @@ body {
 
 body > * {
     padding:var(--page-spacing)
+}
+
+/* || ARROW (STICKY) */
+.sticky {
+    position: sticky;
+    top: 5vw;
+    float: right;
+    font-size: 5vw;
+  
+} 
+
+
+a:hover{ 
+    color:rgba(255, 255, 255, 0.626)
 }
 
 
