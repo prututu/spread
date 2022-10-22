@@ -29,6 +29,7 @@
 
 :root{
     --body-copy:12px;
+    --body-copy-line-height: calc(var(--body-copy)*1.2);
     --page-spacing:24px;
 
     --main-heading: 10vw;
@@ -72,6 +73,7 @@ body {
     color:white;
     font-family: 'PP Neue Montreal';
     font-size: var(--body-copy);
+    line-height: var(--body-copy-line-height);
 }
 
 body > * {
