@@ -90,7 +90,6 @@ body {
     color:white;
     font-family: 'PP Neue Montreal';
     font-size: var(--body-copy);
-    line-height: var(--body-copy-line-height);
 }
 
 body > * {
@@ -100,9 +99,10 @@ body > * {
 /* || ARROW (STICKY) */
 .sticky {
     position: sticky;
-    top: 5vw;
+    top: 2vw;
     float: right;
-    font-size: 5vw;
+    font-size: 4vw;
+    margin-right: 5vw;
   
 } 
 
