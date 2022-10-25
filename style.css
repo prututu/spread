@@ -58,7 +58,9 @@
     --toggle-padding: calc(var(--reference)*0.10);
 
     --display: none;
-    --flex-direction: column
+    --flex-direction: column;
+
+    --switch-position: 2vw;
 }
 
 /* || DESKTOP */
@@ -79,7 +81,9 @@
         --section-width: 68.5vw;
 
         --display: flex;
-        --flex-direction: row
+        --flex-direction: row;
+
+        --switch-position: 2vw;
     }
 }
 
@@ -169,10 +173,52 @@ a:visited{
     height: var(--toggle-height); /* <-- */
 }
 
+/* || MOBILE */
+
 .sticky-switch {
     position: fixed;
-    top: 0;
+    top: 2vh;
+
+    right: var(--switch-position);
+    
+    --reference: 4vw;
+    --toggle-width: calc(var( --reference)*2.55);
+    --toggle-height: calc(var(--reference)*1);
+
+    --toggle-border-radius: calc(var(--reference)*0.5);
+
+    --toggle-switch: calc(var(--reference)*0.80);
+    --toggle-transformx: calc(var(--toggle-width) - var(--reference));
+    --toggle-padding: calc(var(--reference)*0.10);
+
+    
 }
+
+/* || DESKTOP */
+@media (min-width:768px) {
+
+.sticky-switch {
+    position: fixed;
+    top: 2vh;
+
+    right: var(--switch-position);
+    
+    --reference: 4vw;
+    --toggle-width: calc(var( --reference)*2.55);
+    --toggle-height: calc(var(--reference)*1);
+
+    --toggle-border-radius: calc(var(--reference)*0.5);
+
+    --toggle-switch: calc(var(--reference)*0.80);
+    --toggle-transformx: calc(var(--toggle-width) - var(--reference));
+    --toggle-padding: calc(var(--reference)*0.10);
+
+    
+}
+
+}
+    
+
  
 /* Hide default HTML checkbox */
 .switch input {

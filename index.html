@@ -63,10 +63,10 @@
 				</section>
 			</main>
 		</header>
-		<div class="line"> </div>
+		<div class="line" id="line"> </div>
 
 		<!--STICKY ARROW-->
-		<nav class="sticky">&#8593</nav>
+		<!-- <nav class="sticky">&#8593</nav> -->
 		<section class="article-bubbles">
 
 			<div>
@@ -353,7 +353,7 @@
 			let is = document.getElementById('IS');
 			let isnt = document.getElementById('ISNT');
 			let switchdiv = document.getElementById('switch');
-			let switchdivtop = switchdiv.offsetTop;
+			let switchdivtop = document.getElementById('line').offsetTop;
 			window.onscroll = function () { sticker() };
 			document.querySelector('.switch input').addEventListener('change', e => {
 				mainContent.style.display = e.target.checked ? 'block' : 'none';
