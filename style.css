@@ -319,3 +319,60 @@ div {
       flex-direction: column;
     }
   }
+
+  /* MEDIA FOR PRINT */
+
+@media print{
+    :root {
+        --body-copy:16px;
+        --page-spacing:48px;
+
+        --main-heading: 11vw;
+        --sub-heading: calc(var(--body-copy)*2);
+
+        --quote: calc(var(--body-copy)*1.2);
+        
+        --background-color: #ffffff;
+    }
+
+    .footer, .sticky{
+        display: none;
+    }
+
+    .line{
+        border-top: 1px solid black;   
+        margin-top: 20px;
+    }
+    
+    .bubble{
+        outline: 1px solid black;
+    }
+    .side-bubble{
+        outline: 1px solid black;
+    }
+
+    p{
+        margin-top: 0;
+    }
+
+    #main_content, #secondary_content{
+        column-count: 3;
+        column-rule: 1px dotted lightgrey;
+        column-gap: 3em;
+        color: black;
+    }
+    h2{
+        font-size: large;
+        color: black;
+    }
+    h1{
+        color: black;
+    }
+
+}
+
+@page{
+    size: 8.5in 11in;
+    margin-top: 1in;
+    margin-bottom: 1in;
+}
