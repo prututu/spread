@@ -41,7 +41,7 @@
 
     --page-spacing:24px;
 
-    --background-color: black;
+    --background-color: #383838;
     --arrow-width: 6vw;
 
     /* side bubbles */
@@ -161,12 +161,7 @@ a:visited{
 /* || ASSETS */
 
 .line{
-    position: sticky;
-    top:0;
-    display: block;
-    height: 3vw;
-    background-color: gold;
-    border-bottom: 1px solid;
+    border-top: 1px solid;
     margin-top: var(--page-spacing);
     margin-bottom: var(--page-spacing);
 }
@@ -218,12 +213,12 @@ a:visited{
     right: var(--switch-position); */
     padding: 2vh calc(100% - var(--section-width) - var(--page-spacing));
     top: 0;
-    right: 0;
+    right: 3vw;
     width: 100%;
     background: var(--background-color);
     border-bottom: solid 1px white;
 
-    --reference: 4vw;
+    --reference: 3.5vw;
     --toggle-width: calc(var( --reference)*2.55);
     --toggle-height: calc(var(--reference)*1);
 
@@ -398,7 +393,7 @@ div {
         --background-color: #ffffff;
     }
 
-    .footer, .sticky{
+    .footer, .sticky, .sticky-switch{
         display: none;
     }
 
