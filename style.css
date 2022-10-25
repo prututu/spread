@@ -168,6 +168,11 @@ a:visited{
     width: var(--toggle-width);   /* <-- */
     height: var(--toggle-height); /* <-- */
 }
+
+.sticky-switch {
+    position: fixed;
+    top: 0;
+}
  
 /* Hide default HTML checkbox */
 .switch input {
