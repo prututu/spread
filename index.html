@@ -353,7 +353,7 @@
 			let is = document.getElementById('IS');
 			let isnt = document.getElementById('ISNT');
 			let switchdiv = document.getElementById('switch');
-			let switchdivtop = document.getElementById('line').offsetTop;
+			let ref_line = document.getElementById('line');
 			window.onscroll = function () { sticker() };
 			document.querySelector('.switch input').addEventListener('change', e => {
 				mainContent.style.display = e.target.checked ? 'block' : 'none';
@@ -362,9 +362,11 @@
 				is.style.display = e.target.checked ? 'none' : 'block';
 			});
 			function sticker() {
-				if (window.pageYOffset >= switchdivtop) {
+				if (window.pageYOffset >= (ref_line.offsetTop)) {
+					// user scrolled past the reference line
 					switchdiv.classList.add('sticky-switch');
 				} else {
+					// reference line is visible
 					switchdiv.classList.remove('sticky-switch');
 				}
 			}
