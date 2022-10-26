@@ -28,7 +28,7 @@
 /* FOR MOBILE */
 
 :root{
-    --body-copy:12px;
+    --body-copy:17px;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
 
     --main-heading: 10vw;
@@ -433,6 +433,9 @@ div {
     p{
         margin-top: 0;
     }
+    .slider{
+        outline: 1px solid black; 
+    }
 
     #main_content, #secondary_content{
         column-count: 3;
@@ -455,3 +458,11 @@ div {
     margin-top: 1in;
     margin-bottom: 1in;
 }
+/*@page:right{
+    @bottom-right { 
+        margin: 10pt 0 30pt 0;
+        border-top: .25pt solid black;
+        content: counter(page);
+        font-size: 9pt;
+      }
+  }*/
