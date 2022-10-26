@@ -37,7 +37,7 @@
     --quote: calc(var(--body-copy)*1.5);
     --quote-spacing: calc(var(--quote)*1.2);
 
-    --sub-heading: calc(var(--body-copy)*1.5);
+    --sub-heading: calc(var(--body-copy)*0.9);
 
     --page-spacing:24px;
 
@@ -260,6 +260,8 @@ a:visited{
             position: absolute;
             cursor: pointer;
             border-radius: var(--toggle-border-radius); /* <-- */
+            -moz-border-radius: var(--toggle-border-radius);
+            -webkit-border-radius: var(--toggle-border-radius);
 
             top: 0;
             left: 0;
@@ -274,6 +276,8 @@ a:visited{
             position: absolute;
             content: "";
             border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
 
             height: var(--toggle-switch);  /* <-- */
             width: var(--toggle-switch);   /* <-- */
@@ -346,12 +350,16 @@ flex-direction: var(--flex-direction);
     outline: 1px solid;
     height: var(--toggle-height); 
     border-radius: var(--toggle-border-radius);
+    -moz-border-radius: var(--toggle-border-radius);
+    -webkit-border-radius: var(--toggle-border-radius);
 }
 
 /* side bubbles */
 .side-bubble {
     outline: 1px solid;
     border-radius: var(--toggle-border-radius);
+    -moz-border-radius: var(--toggle-border-radius);
+    -webkit-border-radius: var(--toggle-border-radius);
     padding: 3vw;
     flex-wrap: wrap;
 
