@@ -97,8 +97,7 @@ body {
     margin: 0;
 }
 
-
-body{
+body {
     margin:0;
 
 }
@@ -113,10 +112,29 @@ body{
   
 } 
 
-
 a:hover{ 
     color:rgba(255, 255, 255, 0.626)
 }
+
+/* || PAGE SPACING */
+
+.left-right-spacing{
+    margin-left: var(--page-spacing);
+    margin-right: var(--page-spacing)
+}
+
+.right-spacing{
+    margin-right: var(--page-spacing)
+}
+
+.top-spacing{
+    margin-top: var(--page-spacing)
+}
+
+.bottom-spacing{
+    margin-bottom: var(--page-spacing)
+}
+
 
 
 /* || TEXT STYLES*/
@@ -166,119 +184,117 @@ a:visited{
     margin-bottom: var(--page-spacing);
 }
 
-/* || TOGGLE SWITCH CODE */
+        /* || TOGGLE SWITCH CODE */
 
-/* The whole switch */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: var(--toggle-width);   /* <-- */
-    height: var(--toggle-height); /* <-- */
-}
+        /* The whole switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: var(--toggle-width);   /* <-- */
+            height: var(--toggle-height); /* <-- */
+        }
 
-/* || MOBILE */
+        /* || MOBILE */
 
-.sticky-switch {
-    position: fixed;
-    /* top: 2vh;
-    right: var(--switch-position); */
-    padding: 2vh var(--switch-position);
-    top: 0;
-    right: 2vw;
-    width: 100%;
-    background: var(--background-color);
-    border-bottom: solid 1px white;
+        .sticky-switch {
+            position: fixed;
+            /* top: 2vh;
+            right: var(--switch-position); */
+            padding: 2vh var(--switch-position);
+            top: 0;
+            right: 2vw;
+            width: 100%;
+            background: var(--background-color);
+            border-bottom: solid 1px white;
 
-    --reference: 4vw;
-    --toggle-width: calc(var( --reference)*2.55);
-    --toggle-height: calc(var(--reference)*1);
+            --reference: 4vw;
+            --toggle-width: calc(var( --reference)*2.55);
+            --toggle-height: calc(var(--reference)*1);
 
-    --toggle-border-radius: calc(var(--reference)*0.5);
+            --toggle-border-radius: calc(var(--reference)*0.5);
 
-    --toggle-switch: calc(var(--reference)*0.80);
-    --toggle-transformx: calc(var(--toggle-width) - var(--reference));
-    --toggle-padding: calc(var(--reference)*0.10);
-}
+            --toggle-switch: calc(var(--reference)*0.80);
+            --toggle-transformx: calc(var(--toggle-width) - var(--reference));
+            --toggle-padding: calc(var(--reference)*0.10);
+        }
 
-.sticky-switch > .switch {
-    float: right;
-}
+        .sticky-switch > .switch {
+            float: right;
+        }
 
-/* || DESKTOP */
-@media (min-width:768px) {
+        /* || DESKTOP */
+        @media (min-width:768px) {
 
-.sticky-switch {
-    position: fixed;
-    /* top: 2vh;
-    right: var(--switch-position); */
-    padding: 2vh calc(100% - var(--section-width) - var(--page-spacing));
-    top: 0;
-    right: 3vw;
-    width: 100%;
-    background: var(--background-color);
-    border-bottom: solid 1px white;
+        .sticky-switch {
+            position: fixed;
+            /* top: 2vh;
+            right: var(--switch-position); */
+            padding: 2vh calc(97% - var(--section-width) - var(--page-spacing));
+            top: 0;
+            right: 3vw;
+            width: 100%;
+            background: var(--background-color);
+            border-bottom: solid 1px white;
 
-    --reference: 3.5vw;
-    --toggle-width: calc(var( --reference)*2.55);
-    --toggle-height: calc(var(--reference)*1);
+            --reference: 3.5vw;
+            --toggle-width: calc(var( --reference)*2.55);
+            --toggle-height: calc(var(--reference)*1);
 
-    --toggle-border-radius: calc(var(--reference)*0.5);
+            --toggle-border-radius: calc(var(--reference)*0.5);
 
-    --toggle-switch: calc(var(--reference)*0.80);
-    --toggle-transformx: calc(var(--toggle-width) - var(--reference));
-    --toggle-padding: calc(var(--reference)*0.10);
-}
-}
-    
+            --toggle-switch: calc(var(--reference)*0.80);
+            --toggle-transformx: calc(var(--toggle-width) - var(--reference));
+            --toggle-padding: calc(var(--reference)*0.10);
+        }
+        }
+            
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 100;
+            height: 100;
+        }
 
- 
-/* Hide default HTML checkbox */
-.switch input {
-    opacity: 0;
-    width: 100;
-    height: 100;
-}
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            border-radius: var(--toggle-border-radius); /* <-- */
 
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    border-radius: var(--toggle-border-radius); /* <-- */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+            outline: 1px solid;
+            transition: .4s;
+        }
 
-    outline: 1px solid;
-    transition: .4s;
-}
+        .slider:before {
+            position: absolute;
+            content: "";
+            border-radius: 50%;
 
-.slider:before {
-    position: absolute;
-    content: "";
-    border-radius: 50%;
+            height: var(--toggle-switch);  /* <-- */
+            width: var(--toggle-switch);   /* <-- */
 
-    height: var(--toggle-switch);  /* <-- */
-    width: var(--toggle-switch);   /* <-- */
+            left: var(--toggle-padding);    /* <-- */
+            bottom: var(--toggle-padding);  /* <-- */
 
-    left: var(--toggle-padding);    /* <-- */
-    bottom: var(--toggle-padding);  /* <-- */
+            background-color: white;
+            transition: .4s;
+        }
 
-    background-color: white;
-    transition: .4s;
-}
+        input:checked + .slider:before {
+            transform: translateX(var(--toggle-transformx));   /* <-- */
+        }
+        #secondary_content {
+            display: none;
+        }
 
-input:checked + .slider:before {
-    transform: translateX(var(--toggle-transformx));   /* <-- */
-}
-#secondary_content {
-    display: none;
-  }
-
-#ISNT {
-    display: none;
-}
+        #ISNT {
+            display: none;
+        }
 
 /* FLEXBOX */
 
@@ -320,6 +336,10 @@ flex-direction: var(--flex-direction);
     flex: auto;
     }
 
+.center {
+    align-items: center;
+}
+
 /* header bubble */
 .bubble{
     display: inline-block;
@@ -346,6 +366,7 @@ div {
 }
 
 /* || FOOTER */
+
 .footer {
     display: flex;
     flex-direction: row;
@@ -361,7 +382,7 @@ div {
   
   .footer-icons {
     display: inline-flex;
-    font-size: 30px;
+    font-size: 20px;
     justify-content: start;
   }
   .icon-globe{
